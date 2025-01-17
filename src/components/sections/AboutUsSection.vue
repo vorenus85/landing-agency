@@ -22,6 +22,7 @@
                 frameborder="0"
                 allowfullscreen
                 class="w-full h-full"
+                loading="lazy"
               ></iframe>
             </div>
             <img
@@ -31,6 +32,7 @@
               :src="imageUrl('video_cover.webp', '')"
               :width="1200"
               :height="600"
+              loading="lazy"
             />
             <img
               v-if="!videoIsStarted"
@@ -39,6 +41,7 @@
               :src="imageUrl('play.webp', '')"
               :width="150"
               :height="150"
+              loading="lazy"
               @click="playVideo"
             />
           </div>
