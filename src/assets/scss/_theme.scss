@@ -27,13 +27,16 @@ body {
 @keyframes float {
   0% {
     transform: translatey(0);
+    transform-origin: center;
   }
 
   50% {
     transform: translatey(-20px);
+    transform-origin: center;
   }
 
   to {
     transform: translatey(0);
+    transform-origin: center;
   }
 }

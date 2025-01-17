@@ -1,13 +1,16 @@
 <template>
-  <div class="about-us-section">
-    <div class="container mx-auto" id="about-us">
+  <div class="about-us-section mb-5 relative">
+    <div class="container mx-auto relative z-10" id="about-us">
       <div class="about-us-module">
-        <div class="module-head">
+        <div class="module-head flex flew-wrap pb-10 pt-0 md:pt-5 flex-col md:flex-row">
           <h2 class="module-title" v-html="title"></h2>
-          <div class="module-description" v-html="description"></div>
+          <div
+            class="module-description text-center md:text-left ml-0 md:ml-auto"
+            v-html="description"
+          ></div>
         </div>
         <div class="module-body">
-          <div class="video-container">
+          <div class="video-container relative">
             <img
               class="video_cover"
               :alt="video?.alt"
@@ -16,7 +19,7 @@
               :height="video?.height"
             />
             <img
-              class="play-btn"
+              class="video-play-btn absolute z-10 jelly-animation"
               alt="play video"
               :src="imageUrl('play.png', '')"
               :width="150"
@@ -26,6 +29,13 @@
         </div>
       </div>
     </div>
+    <img
+      class="video-glow absolute hidden md:block z-0"
+      alt="video glow"
+      :src="imageUrl('glow_1.png', '')"
+      :width="1152"
+      :height="1514"
+    />
   </div>
 </template>
 
@@ -48,7 +58,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
 .about-us-section {
-  padding: 55px 0;
+  padding: 25px 0;
 }
 
 .about-us-module {
@@ -61,42 +71,51 @@ onMounted(() => {
 
   .module-title {
     color: $body-text-color;
-    font-size: 32px;
+    font-size: 26px;
     line-height: 1.5;
   }
 
   .module-description {
     font-size: 1.15rem;
+    line-height: 39px;
+    letter-spacing: -0.6565263867378235px;
+    flex: 0 0 33%;
   }
+}
+
+.video-glow {
+  top: -400px;
+  left: 0;
+}
+
+.video-play-btn {
+  // todo simple pulse effect
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transform-origin: center;
+  max-width: 50px;
 }
 
 @media (min-width: 1024px) {
   .about-us-module {
     .module-title {
-      font-size: 48px;
-      line-height: 60px;
+      font-size: 60px;
+      line-height: 70px;
+    }
+
+    .module-description {
+      padding-left: 85px;
     }
   }
-}
-</style>
-<style lang="scss">
-.about-us-module .module-description {
-  opacity: 0.7;
-}
 
-.about-us-module .module-body li {
-  padding-left: 30px;
-  position: relative;
-  padding-bottom: 15px;
-  &:before {
-    content: '';
-    height: 20px;
-    width: 20px;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 3px;
-    background-image: url('/esetup/images/check.svg');
+  .video-play-btn {
+    max-width: initial;
+  }
+
+  .about-us-section {
+    padding: 55px 0;
   }
 }
 </style>
