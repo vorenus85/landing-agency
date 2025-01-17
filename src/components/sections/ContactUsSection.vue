@@ -35,7 +35,7 @@
           class="floating-element-1 float-animation-2 hidden lg:block"
           loading="lazy"
           alt="floating symbol"
-          :src="imageUrl('symbol_7.png', '')"
+          :src="imageUrl('symbol_7.webp', '')"
           width="89"
           height="94"
         />
@@ -43,7 +43,7 @@
           class="floating-element-2 float-animation-3 hidden lg:block"
           loading="lazy"
           alt="floating symbol"
-          :src="imageUrl('symbol_8.png', '')"
+          :src="imageUrl('symbol_8.webp', '')"
           width="70"
           height="70"
         />

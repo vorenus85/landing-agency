@@ -65,7 +65,7 @@
     <img
       class="symbol absolute hidden md:block z-0"
       alt="symbol"
-      :src="imageUrl('symbol_6.png', '')"
+      :src="imageUrl('symbol_6.webp', '')"
       :width="123"
       :height="123"
     />
@@ -199,7 +199,7 @@ onMounted(() => {
       content: '';
       width: 86px;
       height: 32px;
-      background: url('/landing-agency/images/reviewer_bg.png');
+      background: url('/landing-agency/images/reviewer_bg.webp');
       display: block;
       position: absolute;
       top: -32px;

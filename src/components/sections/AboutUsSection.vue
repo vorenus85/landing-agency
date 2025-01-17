@@ -28,7 +28,7 @@
               v-if="!videoIsStarted"
               class="video_cover"
               :alt="video?.alt"
-              :src="imageUrl('video_cover.png', '')"
+              :src="imageUrl('video_cover.webp', '')"
               :width="1200"
               :height="600"
             />
@@ -36,7 +36,7 @@
               v-if="!videoIsStarted"
               class="video-play-btn absolute z-10 jelly-animation"
               alt="play video"
-              :src="imageUrl('play.png', '')"
+              :src="imageUrl('play.webp', '')"
               :width="150"
               :height="150"
               @click="playVideo"
@@ -48,7 +48,7 @@
     <img
       class="video-glow absolute hidden md:block z-0"
       alt="video glow"
-      :src="imageUrl('glow_1.png', '')"
+      :src="imageUrl('glow_1.webp', '')"
       :width="1152"
       :height="1514"
     />

@@ -24,7 +24,7 @@
       class="symbol symbol-1 hidden md:block absolute float-animation-2"
       :class="symbol1Class"
       alt="floating symbol 1"
-      :src="imageUrl('symbol_1.png', '')"
+      :src="imageUrl('symbol_1.webp', '')"
       :width="99"
       :height="32"
     />
@@ -32,7 +32,7 @@
       class="symbol symbol-2 hidden md:block absolute float-animation-3"
       :class="symbol2Class"
       alt="floating symbol 2"
-      :src="imageUrl('symbol_2.png', '')"
+      :src="imageUrl('symbol_2.webp', '')"
       :width="51"
       :height="60"
     />
@@ -40,7 +40,7 @@
       class="symbol symbol-3 hidden md:block absolute float-animation-3"
       :class="symbol3Class"
       alt="floating symbol 3"
-      :src="imageUrl('symbol_3.png', '')"
+      :src="imageUrl('symbol_3.webp', '')"
       :width="105"
       :height="121"
     />
@@ -49,7 +49,7 @@
       class="symbol symbol-4 hidden md:block absolute float-animation-2"
       :class="symbol4Class"
       alt="floating symbol 4"
-      :src="imageUrl('symbol_4.png', '')"
+      :src="imageUrl('symbol_4.webp', '')"
       :width="104"
       :height="104"
     />

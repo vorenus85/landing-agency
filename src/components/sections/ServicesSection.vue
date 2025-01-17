@@ -39,7 +39,7 @@
     <img
       class="glow absolute hidden md:block z-0"
       alt="glow"
-      :src="imageUrl('glow_2.png', '')"
+      :src="imageUrl('glow_2.webp', '')"
       :width="1092"
       :height="1514"
     />
@@ -47,7 +47,7 @@
     <img
       class="wave-symbol absolute hidden md:block z-0"
       alt="wave"
-      :src="imageUrl('symbol_5.png', '')"
+      :src="imageUrl('symbol_5.webp', '')"
       :width="165"
       :height="81"
     />
