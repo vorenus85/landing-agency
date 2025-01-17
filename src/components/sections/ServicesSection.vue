@@ -22,7 +22,7 @@
               <div class="service-icon flex justify-center pb-0 md:pb-5">
                 <img
                   :class="`float-animation-${index + 1}`"
-                  :alt="service.alt"
+                  :alt="service.title"
                   :src="imageUrl(service.icon, folder)"
                   loading="lazy"
                   :width="50"
