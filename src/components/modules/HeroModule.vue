@@ -1,5 +1,5 @@
 <template>
-  <div class="hero-section container mx-auto relative">
+  <div class="hero-section container mx-auto relative z-10">
     <div class="hero-module py-5 lg:py-8 text-center mx-auto">
       <div class="hero-top">
         <div class="hero-title pb-5">
@@ -116,31 +116,31 @@ onMounted(() => {
 
 .symbol-1 {
   top: 80px;
-  left: 0;
+  left: 30px;
 
   &-hovered {
     top: 120px;
-    left: 40px;
+    left: 70px;
   }
 }
 
 .symbol-2 {
   bottom: 20px;
-  left: 50px;
+  left: 100px;
 
   &-hovered {
     bottom: 60px;
-    left: 90px;
+    left: 140px;
   }
 }
 
 .symbol-3 {
   top: 80px;
-  right: 0;
+  right: 10px;
 
   &-hovered {
     top: 120px;
-    right: 40px;
+    right: 50px;
   }
 }
 
