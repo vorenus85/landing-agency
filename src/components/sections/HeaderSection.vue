@@ -1,5 +1,5 @@
 <template>
-  <section class="header-section">
+  <section class="header-section relative z-30">
     <HeaderTopModule></HeaderTopModule>
     <HeroModule></HeroModule>
   </section>

@@ -1,36 +1,50 @@
 {
   "data": {
     "title": "Testimonials",
-    "subTitle": "Our Client Reviews"
-  },
-  "reviews": [
-    {
-      "id": 1,
-      "name": "Mr Jorce",
-      "image": "jorce.png",
-      "role": "Retail Company",
-      "review": "“thank you for realizing the idea and highly recommend it for those of you who want to create a system”"
-    },
-    {
-      "id": 2,
-      "name": "Ms Elvy",
-      "image": "elvy.png",
-      "role": "investment company",
-      "review": "“Investment is quite important in this era, and because of you I was able to create a corporate system for my own investment”"
-    },
-    {
-      "id": 3,
-      "name": "Mpok Ina",
-      "image": "ina.png",
-      "role": "Retail Company",
-      "review": "“thank you for realizing the idea and highly recommend it for those of you who want to create a system”"
-    },
-    {
-      "id": 1,
-      "name": "Mr Jorce",
-      "image": "jorce.png",
-      "role": "Retail Company",
-      "review": "“thank you for realizing the idea and highly recommend it for those of you who want to create a system”"
-    }
-  ]
+    "subTitle": "Our Client Reviews",
+    "reviews": [
+      {
+        "id": 1,
+        "name": "Mr Jorce",
+        "image": "jorce.png",
+        "role": "Retail Company",
+        "content": "“thank you for realizing the idea and highly recommend it for those of you who want to create a system”"
+      },
+      {
+        "id": 2,
+        "name": "Ms Elvy",
+        "image": "elvy.png",
+        "role": "investment company",
+        "content": "“Investment is quite important in this era, and because of you I was able to create a corporate system for my own investment”"
+      },
+      {
+        "id": 3,
+        "name": "Mpok Ina",
+        "image": "ina.png",
+        "role": "Retail Company",
+        "content": "“thank you for realizing the idea and highly recommend it for those of you who want to create a system”"
+      },
+      {
+        "id": 4,
+        "name": "Mr Jorce",
+        "image": "jorce.png",
+        "role": "Retail Company",
+        "content": "“thank you for realizing the idea and highly recommend it for those of you who want to create a system”"
+      },
+      {
+        "id": 5,
+        "name": "Ms Elvy",
+        "image": "elvy.png",
+        "role": "investment company",
+        "content": "“Investment is quite important in this era, and because of you I was able to create a corporate system for my own investment”"
+      },
+      {
+        "id": 6,
+        "name": "Mpok Ina",
+        "image": "ina.png",
+        "role": "Retail Company",
+        "content": "“thank you for realizing the idea and highly recommend it for those of you who want to create a system”"
+      }
+    ]
+  }
 }
