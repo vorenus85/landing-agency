@@ -1,7 +1,7 @@
 <template>
-  <div class="about-us-section mb-5 relative">
+  <div class="about-us-section mb-5 relative z-20">
     <div class="container mx-auto relative z-10" id="about-us">
-      <div class="about-us-module px-0 md:px-5">
+      <div class="about-us-module">
         <div class="module-head flex flew-wrap pb-10 pt-0 md:pt-5 flex-col md:flex-row">
           <h2 class="module-title" v-html="title"></h2>
           <div
@@ -71,7 +71,7 @@ onMounted(() => {
 
   .module-title {
     color: $body-text-color;
-    font-size: 26px;
+    font-size: 28px;
     line-height: 1.5;
   }
 

@@ -45,9 +45,24 @@ onMounted(() => {
       transition: width 0.3s ease-in-out;
     }
 
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      top: 5px;
+      right: 0;
+      background-color: $secondary-color;
+      transition: width 0.3s ease-in-out;
+    }
+
     &:hover {
       color: $secondary-color;
       &:after {
+        width: 100%;
+      }
+
+      &:before {
         width: 100%;
       }
     }

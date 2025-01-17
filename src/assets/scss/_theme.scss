@@ -12,7 +12,8 @@ body {
   text-align: center;
 }
 
-.float-animation {
+.float-animation,
+.float-animation-1 {
   animation: float 6s ease-in-out infinite;
 }
 
@@ -21,6 +22,10 @@ body {
 }
 
 .float-animation-3 {
+  animation: float 10s ease-in-out infinite;
+}
+
+.float-animation-4 {
   animation: float 10s ease-in-out infinite;
 }
 
