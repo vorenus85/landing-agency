@@ -32,18 +32,45 @@ const btnVariant = computed(() => {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
+
+@mixin btn-glow-effect {
+  &:after {
+    background: #fff;
+    content: '';
+    height: 155px;
+    left: -75px;
+    opacity: 0.2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: 1;
+  }
+}
+
+@mixin btn-glow-effect-hover {
+  &:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
 .btn {
-  --btn-min-width: 150px;
-  --btn-height: 50px;
-  font-size: 1rem;
+  --btn-min-width: 160px;
+  --btn-height: 55px;
+  font-size: 1.15rem;
   min-width: var(--btn-min-width);
   line-height: var(--btn-height);
   text-align: center;
   height: var(--btn-height);
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
 
   &:hover {
     opacity: 0.9;
@@ -57,12 +84,16 @@ const btnVariant = computed(() => {
   &-secondary {
     color: #fff;
     background: $secondary-color;
+    @include btn-glow-effect;
+
+    &:hover {
+      @include btn-glow-effect-hover;
+    }
   }
 
   &-secondary-outlined {
-    border: 1px solid $secondary-color;
+    border: 2px solid $secondary-color;
     color: $secondary-color;
-    background: #fff;
 
     &:hover {
       color: #fff;
@@ -73,12 +104,16 @@ const btnVariant = computed(() => {
   &-primary {
     color: #fff;
     background: $primary-color;
+    @include btn-glow-effect;
+
+    &:hover {
+      @include btn-glow-effect-hover;
+    }
   }
 
   &-primary-outlined {
-    border: 1px solid $primary-color;
+    border: 2px solid $primary-color;
     color: $primary-color;
-    background: #fff;
 
     &:hover {
       color: #fff;

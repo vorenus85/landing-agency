@@ -22,17 +22,17 @@ onMounted(() => {
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
 .menu {
-  gap: 10px;
-  font-size: 0.875rem;
-  text-transform: uppercase;
+  gap: 40px;
+  font-size: 1.15rem;
   color: $body-text-color;
 
   &-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     position: relative;
+    font-weight: 700;
 
     &:after {
       content: '';
