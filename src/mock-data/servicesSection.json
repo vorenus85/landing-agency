@@ -1,0 +1,33 @@
+{
+  "data": {
+    "title": "What services do we offer?",
+    "subTitle": "These are some of the services that you will get if you cooperate with us, of course there are many more.",
+    "linkText": "See more",
+    "services": [
+      {
+        "id": 1,
+        "icon": "strategy.svg",
+        "title": "Content Strategy",
+        "description": "All our content marketing service packages include a custom content strategy"
+      },
+      {
+        "id": 2,
+        "icon": "development.svg",
+        "title": "Content Development",
+        "description": "We create some content calendar for your company’s must-share content"
+      },
+      {
+        "id": 3,
+        "icon": "creation.svg",
+        "title": "Content Creation",
+        "description": "Experienced in copywriting and marketing team begins creating content"
+      },
+      {
+        "id": 4,
+        "icon": "optimization.svg",
+        "title": "Content Optimization",
+        "description": "Your content marketing management services also include SEO"
+      }
+    ]
+  }
+}
