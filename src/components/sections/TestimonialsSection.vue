@@ -144,7 +144,6 @@ onMounted(() => {
 .carousel-nav {
   width: 50px;
   height: 50px;
-  display: none;
   align-items: center;
   justify-content: center;
   background: #fff;
@@ -200,7 +199,7 @@ onMounted(() => {
       content: '';
       width: 86px;
       height: 32px;
-      background: url('/agency/images/reviewer_bg.png');
+      background: url('/landing-agency/images/reviewer_bg.png');
       display: block;
       position: absolute;
       top: -32px;
