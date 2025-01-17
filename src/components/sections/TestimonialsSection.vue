@@ -1,5 +1,5 @@
 <template>
-  <div class="testimonial-section relative z-20 pb-20" id="testimonial">
+  <div class="testimonial-section relative z-20 pb-20 pt-10" id="testimonial">
     <div class="container mx-auto">
       <div class="testimonial-module">
         <div class="module-head">
@@ -30,6 +30,13 @@
         >
       </div>
     </div>
+    <img
+      class="symbol absolute hidden md:block z-0"
+      alt="symbol"
+      :src="imageUrl('symbol_6.png', '')"
+      :width="123"
+      :height="123"
+    />
   </div>
 </template>
 
@@ -50,7 +57,7 @@ const reviews = ref([])
 const carouselRef = ref()
 
 const carouselConfig = {
-  itemsToShow: 1.5,
+  itemsToShow: 1,
   itemsToScroll: 1,
   wrapAround: true,
   snapAlign: 'center',
@@ -89,10 +96,15 @@ onMounted(() => {
   }
 
   .module-subtitle {
-    font-size: 42px;
     font-weight: 700;
-    line-height: 60.69px;
+    font-size: 28px;
+    line-height: 1.5;
   }
+}
+
+.symbol {
+  top: 0;
+  right: 20px;
 }
 
 .review-list {
