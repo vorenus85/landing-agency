@@ -10,20 +10,36 @@
           ></div>
         </div>
         <div class="module-body">
-          <div class="video-container relative">
+          <div class="video-container relative w-full h-full">
+            <div class="aspect-video" :class="{ hidden: !videoIsStarted }">
+              <iframe
+                allow="autoplay"
+                ref="video"
+                id="video"
+                width="1200"
+                height="600"
+                :src="videoUrl"
+                frameborder="0"
+                allowfullscreen
+                class="w-full h-full"
+              ></iframe>
+            </div>
             <img
+              v-if="!videoIsStarted"
               class="video_cover"
               :alt="video?.alt"
-              :src="imageUrl(video?.cover, '')"
-              :width="video?.width"
-              :height="video?.height"
+              :src="imageUrl('video_cover.png', '')"
+              :width="1200"
+              :height="600"
             />
             <img
+              v-if="!videoIsStarted"
               class="video-play-btn absolute z-10 jelly-animation"
               alt="play video"
               :src="imageUrl('play.png', '')"
               :width="150"
               :height="150"
+              @click="playVideo"
             />
           </div>
         </div>
@@ -48,6 +64,15 @@ const { imageUrl } = useImageUrl()
 const title = ref(null)
 const description = ref(null)
 const video = ref(null)
+
+const videoIsStarted = ref(false)
+const videoUrl = ref('//www.youtube.com/embed/uZ0RZm3-Tz4?rel=0')
+
+const playVideo = () => {
+  videoIsStarted.value = true
+  videoUrl.value += '&autoplay=1&mute=1' // need mute to work autoplay
+}
+
 onMounted(() => {
   title.value = moduleData.data.title
   video.value = moduleData.data.video
@@ -96,6 +121,11 @@ onMounted(() => {
   cursor: pointer;
   transform-origin: center;
   max-width: 50px;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 }
 
 @media (min-width: 1024px) {

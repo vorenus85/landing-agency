@@ -13,6 +13,7 @@
               variant="primary"
               @mouseover="ctaMouseOver"
               @mouseleave="ctaMouseLeave"
+              @click="getStarted"
             ></Button>
           </div>
         </div>
@@ -65,6 +66,10 @@ const heroTitle = ref(null)
 const description = ref(null)
 const cta = ref(null)
 const banner = ref({ alt: '', image: '' })
+
+const getStarted = () => {
+  document.getElementById('services').scrollIntoView({ behavior: 'smooth' })
+}
 
 const symbol1Class = ref('')
 const symbol2Class = ref('')

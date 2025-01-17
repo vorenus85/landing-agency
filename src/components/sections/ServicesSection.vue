@@ -8,7 +8,7 @@
             <h3 class="module-subtitle pb-8">{{ subTitle }}</h3>
           </div>
           <div class="module-body">
-            <a href="#" class="see-more tertiary-color underline">See More</a>
+            <a href="#testimonial" class="see-more tertiary-color underline">See More</a>
             {{ description }}
           </div>
         </div>
