@@ -8,7 +8,39 @@
         </div>
         <div class="module-body"></div>
       </div>
-      <div class="review-list">
+      <div class="review-list relative">
+        <div class="prev carousel-nav hidden md:flex" @click="prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="15"
+            viewBox="0 0 21 15"
+            fill="none"
+          >
+            <path
+              d="M19.6958 7.43548H2.48568M2.48568 7.43548C2.48568 7.43548 7.36397 4.22725 8.35524 1.56592M2.48568 7.43548C2.48568 7.43548 6.79826 10.45 8.35524 13.305"
+              stroke="#1E1E1E"
+              stroke-width="2.17391"
+              stroke-linecap="square"
+            />
+          </svg>
+        </div>
+        <div class="next carousel-nav hidden md:flex" @click="next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="15"
+            viewBox="0 0 21 15"
+            fill="none"
+          >
+            <path
+              d="M1.3042 7.43548H18.5143M18.5143 7.43548C18.5143 7.43548 13.636 4.22725 12.6448 1.56592M18.5143 7.43548C18.5143 7.43548 14.2017 10.45 12.6448 13.305"
+              stroke="#1E1E1E"
+              stroke-width="2.17391"
+              stroke-linecap="square"
+            />
+          </svg>
+        </div>
         <Carousel v-bind="carouselConfig" ref="carouselRef">
           <Slide class="review" v-for="review in reviews" :key="review.id">
             <div class="review-item">
@@ -53,6 +85,13 @@ const { imageUrl } = useImageUrl()
 const title = ref(null)
 const subTitle = ref(null)
 const reviews = ref([])
+
+const next = () => {
+  carouselRef.value.next()
+}
+const prev = () => {
+  carouselRef.value.prev()
+}
 
 const carouselRef = ref()
 
@@ -99,6 +138,40 @@ onMounted(() => {
     font-weight: 700;
     font-size: 28px;
     line-height: 1.5;
+  }
+}
+
+.carousel-nav {
+  width: 50px;
+  height: 50px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 75px;
+
+  &.prev {
+    left: 0;
+  }
+  &.next {
+    right: 0;
+  }
+
+  &:hover {
+    &.prev svg {
+      transform: translateX(-5px);
+    }
+
+    &.next svg {
+      transform: translateX(5px);
+    }
+  }
+
+  svg {
+    transition: all 0.2s;
   }
 }
 
