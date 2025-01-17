@@ -22,7 +22,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 @import '@/assets/scss/_variables.scss';
 .menu {
-  gap: 40px;
+  gap: 20px;
   font-size: 1.15rem;
   color: $body-text-color;
 
@@ -66,6 +66,12 @@ onMounted(() => {
         width: 100%;
       }
     }
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    gap: 40px;
   }
 }
 </style>

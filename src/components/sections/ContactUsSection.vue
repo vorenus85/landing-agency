@@ -1,12 +1,12 @@
 <template>
-  <div class="contact-us-section">
-    <div class="container mx-auto relative" id="contact-us">
-      <div class="contact-us-module pb-10">
-        <div class="module-head pb-5">
-          <h2 class="module-title">{{ title }}</h2>
+  <div class="contact-us-section relative mt-10 pt-10">
+    <div class="container mx-auto pb-10 relative" id="contact-us">
+      <div class="contact-us-module">
+        <div class="module-head pb-5 pt-10">
+          <h2 class="module-title mx-auto">{{ title }}</h2>
         </div>
         <div class="module-body">
-          <div class="contact-us-form mt-10 mx-auto pt-10">
+          <div class="contact-us-form mx-auto pt-5 mb-5">
             <form
               class="flex gap-2 flex-col md:flex-row"
               @submit.prevent="submitForm"
@@ -22,32 +22,32 @@
                   :placeholder="form?.emailPlaceholder"
                 />
                 <div class="form-text py-2">
-                  <span v-if="emailSuccess">{{ emailSuccess }}</span>
-                  <span v-if="emailError">{{ emailError }}</span>
+                  <span v-if="emailSuccess" class="text-green-500">{{ emailSuccess }}</span>
+                  <span v-if="emailError" class="text-red-500">{{ emailError }}</span>
                 </div>
               </div>
 
-              <Button variant="primary" type="submit" :label="form?.cta"></Button>
+              <Button variant="secondary" type="submit" :label="form?.cta"></Button>
             </form>
           </div>
         </div>
+        <img
+          class="floating-element-1 float-animation-2 hidden lg:block"
+          loading="lazy"
+          alt="floating symbol"
+          :src="imageUrl('symbol_7.png', '')"
+          width="89"
+          height="94"
+        />
+        <img
+          class="floating-element-2 float-animation-3 hidden lg:block"
+          loading="lazy"
+          alt="floating symbol"
+          :src="imageUrl('symbol_8.png', '')"
+          width="70"
+          height="70"
+        />
       </div>
-      <img
-        class="floating-element-1 float-animation-2 hidden lg:block"
-        loading="lazy"
-        alt="floating symbol"
-        :src="imageUrl('symbol_7.png', '')"
-        width="89"
-        height="94"
-      />
-      <img
-        class="floating-element-2 float-animation-3 hidden lg:block"
-        loading="lazy"
-        alt="floating symbol"
-        :src="imageUrl('symbol_8.png', '')"
-        width="70"
-        height="70"
-      />
     </div>
     <div class="container mx-auto pt-5 footer-menu" id="footer-menu">
       <FooterModule />
@@ -85,35 +85,28 @@ onMounted(() => {
 <style lang="scss" scoped>
 .floating-element-1 {
   position: absolute;
-  left: 7%;
-  top: 75%;
+  left: -20px;
+  top: -20px;
 }
 
 .floating-element-2 {
   position: absolute;
-  right: 15%;
-  top: 45%;
+  right: 10px;
+  top: -10px;
 }
 
 .contact-us-section {
-  background: #0c111f;
-  color: #fff;
-  padding: 80px 0 0 0;
 }
 
 .contact-us-module {
+  background: #fff;
+  border-radius: 80px 20px 20px 20px;
+  padding: 1rem;
   .module-title {
-    font-weight: 400;
-    letter-spacing: -0.5px;
-    font-size: 24px;
-    line-height: 36px;
-    color: #fff;
-  }
-
-  .module-description {
-    color: #fff;
-    opacity: 0.6;
-    text-align: center;
+    color: #1e1e1e;
+    font-size: 18px;
+    line-height: 1.5;
+    text-wrap: initial;
   }
 }
 
@@ -129,13 +122,14 @@ onMounted(() => {
 
 @media (min-width: 1024px) {
   .contact-us-section {
-    padding: 110px 0 0 0;
   }
 
   .contact-us-module {
+    border-radius: 130px 20px 20px 20px;
     .module-title {
-      font-size: 36px;
-      line-height: 50px;
+      font-size: 33px;
+      line-height: 54px;
+      max-width: 760px;
     }
   }
 }

@@ -2,12 +2,14 @@
   border-radius: 5px;
   height: 60px;
   padding: 0.5rem 1rem;
+  padding-left: 70px;
   appearance: none;
   outline: none;
-  border: 1px solid transparent;
-  background: #1f2431;
-  color: #bcbdc1;
+  border: 1px solid #1d1b1b;
+  background: #fff;
+  color: #39425d;
   font-size: 1rem;
+  background: url('/agency/images/email.svg') no-repeat 30px center;
 }
 
 .form-text {
