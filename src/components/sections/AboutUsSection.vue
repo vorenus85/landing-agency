@@ -16,8 +16,8 @@
                 allow="autoplay"
                 ref="video"
                 id="video"
-                width="1200"
-                height="600"
+                :width="video?.width"
+                :height="video?.height"
                 :src="videoUrl"
                 frameborder="0"
                 allowfullscreen
@@ -28,16 +28,16 @@
             <img
               v-if="!videoIsStarted"
               class="video_cover"
-              :alt="video?.alt"
               :src="imageUrl('video_cover.webp', '')"
-              :width="1200"
-              :height="600"
+              :width="video?.width"
+              :height="video?.height"
+              alt="video cover"
               loading="lazy"
             />
             <img
               v-if="!videoIsStarted"
               class="video-play-btn absolute z-10 jelly-animation"
-              alt="play video"
+              :alt="'play video'"
               :src="imageUrl('play.webp', '')"
               :width="150"
               :height="150"
