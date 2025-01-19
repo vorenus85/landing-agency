@@ -1,5 +1,5 @@
 <template>
-  <a href="/" class="logo flex items-center" :class="logoVariant">
+  <a :href="baseUrl" class="logo flex items-center" :class="logoVariant" title="Home">
     <svg
       width="108"
       height="24"
@@ -20,6 +20,8 @@
 
 <script setup>
 import { computed } from 'vue'
+
+const baseUrl = import.meta.env.VITE_BASE_URL
 
 const props = defineProps({
   variant: {
